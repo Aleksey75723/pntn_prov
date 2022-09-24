@@ -1,0 +1,12 @@
+C:\Users\JIexaSSD\source\repos\PNTN_prov\bin\Debug\PNTN_prov.exe.config
+C:\Users\JIexaSSD\source\repos\PNTN_prov\bin\Debug\PNTN_prov.exe
+C:\Users\JIexaSSD\source\repos\PNTN_prov\bin\Debug\PNTN_prov.pdb
+C:\Users\JIexaSSD\source\repos\PNTN_prov\obj\Debug\PNTN_prov.csproj.AssemblyReference.cache
+C:\Users\JIexaSSD\source\repos\PNTN_prov\obj\Debug\PNTN_prov.Form1.resources
+C:\Users\JIexaSSD\source\repos\PNTN_prov\obj\Debug\PNTN_prov.Properties.Resources.resources
+C:\Users\JIexaSSD\source\repos\PNTN_prov\obj\Debug\PNTN_prov.csproj.GenerateResource.cache
+C:\Users\JIexaSSD\source\repos\PNTN_prov\obj\Debug\PNTN_prov.csproj.CoreCompileInputs.cache
+C:\Users\JIexaSSD\source\repos\PNTN_prov\obj\Debug\PNTN_prov.exe
+C:\Users\JIexaSSD\source\repos\PNTN_prov\obj\Debug\PNTN_prov.pdb
+C:\Users\JIexaSSD\source\repos\PNTN_prov\obj\Debug\PNTN_prov.Form2.resources
+C:\Users\JIexaSSD\source\repos\PNTN_prov\obj\Debug\PNTN_prov.Form3.resources
