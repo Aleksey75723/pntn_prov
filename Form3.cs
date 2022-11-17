@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PNTN_prov
@@ -22,15 +15,9 @@ namespace PNTN_prov
             comboBox1.Text = "Общая схема";
 
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-
         }
-
-
         void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
-
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
@@ -54,18 +41,12 @@ namespace PNTN_prov
                 case 6:
                     pictureBox1.Image = PNTN_prov.Properties.Resources._4_6_6;
                     comboBox1.Text = "4.6.6"; break;
-
             }
-        }
-
-        
-        //при закрытии можно открывать еще
+        }//выбор схемы
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
             ((Control)sender).Hide();
-        }
-
-
+        }//окно не удаляется при зыкрытии, даёт возможность открыть повторно
     }
 }

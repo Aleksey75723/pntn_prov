@@ -121,6 +121,114 @@ namespace PNTN_prov.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на δ X1:1-X1:2.
+        /// </summary>
+        internal static string accuracy__X1_1_X1_2 {
+            get {
+                return ResourceManager.GetString("accuracy_ X1:1-X1:2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на δ X1:5-X1:6.
+        /// </summary>
+        internal static string accuracy_X1_5_X1_6 {
+            get {
+                return ResourceManager.GetString("accuracy_X1:5-X1:6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на δ X2:1-X2:2.
+        /// </summary>
+        internal static string accuracy_X2_1_X2_2 {
+            get {
+                return ResourceManager.GetString("accuracy_X2:1-X2:2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на δ X2:3-X2:6.
+        /// </summary>
+        internal static string accuracy_X2_3_X2_6 {
+            get {
+                return ResourceManager.GetString("accuracy_X2:3-X2:6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на δ X2:4-X2:5.
+        /// </summary>
+        internal static string accuracy_X2_4_X2_5 {
+            get {
+                return ResourceManager.GetString("accuracy_X2:4-X2:5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на δ X2:7-X2:8.
+        /// </summary>
+        internal static string accuracy_X2_7_X2_8 {
+            get {
+                return ResourceManager.GetString("accuracy_X2:7-X2:8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на pntn_const.txt.
+        /// </summary>
+        internal static string ConstantsFile {
+            get {
+                return ResourceManager.GetString("ConstantsFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на I X2:4-X2:5.
+        /// </summary>
+        internal static string current_X2_4_X2_5 {
+            get {
+                return ResourceManager.GetString("current_X2:4-X2:5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на I X2:7-X2:8.
+        /// </summary>
+        internal static string current_X2_7_X2_8 {
+            get {
+                return ResourceManager.GetString("current_X2:7-X2:8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Не исправен.
+        /// </summary>
+        internal static string DefaultLabelsTextFaulty {
+            get {
+                return ResourceManager.GetString("DefaultLabelsTextFaulty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Исправен.
+        /// </summary>
+        internal static string DefaultLabelsTextСorrect {
+            get {
+                return ResourceManager.GetString("DefaultLabelsTextСorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на pntn_protokol.txt.
+        /// </summary>
+        internal static string ProtokolFile {
+            get {
+                return ResourceManager.GetString("ProtokolFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap общая_схема {

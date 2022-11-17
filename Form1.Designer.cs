@@ -145,7 +145,7 @@ namespace PNTN_prov
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(238, 71);
+            this.textBox1.Location = new System.Drawing.Point(238, 68);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(130, 20);
             this.textBox1.TabIndex = 2;
@@ -168,7 +168,7 @@ namespace PNTN_prov
             this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.Location = new System.Drawing.Point(526, 104);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(198, 20);
+            this.textBox3.Size = new System.Drawing.Size(133, 20);
             this.textBox3.TabIndex = 4;
             this.textBox3.Text = "0";
             // 
@@ -185,7 +185,7 @@ namespace PNTN_prov
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menuStrip1.Size = new System.Drawing.Size(816, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(764, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -210,7 +210,7 @@ namespace PNTN_prov
             this.сделатьЗаписьToolStripMenuItem.Name = "сделатьЗаписьToolStripMenuItem";
             this.сделатьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.сделатьЗаписьToolStripMenuItem.Text = "Записать проверку в протокол";
-            this.сделатьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.RecordProtocolToolStripMenuItem_Click);
+            this.сделатьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.WriteProtocolToolStripMenuItem_Click);
             // 
             // открытьПротоколToolStripMenuItem
             // 
@@ -275,7 +275,7 @@ namespace PNTN_prov
             // 
             // очиститьВсёToolStripMenuItem
             // 
-            this.очиститьВсёToolStripMenuItem.Margin = new System.Windows.Forms.Padding(300, 0, 0, 0);
+            this.очиститьВсёToolStripMenuItem.Margin = new System.Windows.Forms.Padding(250, 0, 0, 0);
             this.очиститьВсёToolStripMenuItem.Name = "очиститьВсёToolStripMenuItem";
             this.очиститьВсёToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.очиститьВсёToolStripMenuItem.Text = "Очистить всё";
@@ -284,7 +284,7 @@ namespace PNTN_prov
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(729, 107);
+            this.label1.Location = new System.Drawing.Point(667, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 6;
@@ -435,7 +435,7 @@ namespace PNTN_prov
             this.textBox20.BackColor = System.Drawing.Color.White;
             this.textBox20.Location = new System.Drawing.Point(526, 70);
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(198, 20);
+            this.textBox20.Size = new System.Drawing.Size(133, 20);
             this.textBox20.TabIndex = 45;
             this.textBox20.Text = "0";
             // 
@@ -453,7 +453,7 @@ namespace PNTN_prov
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label6.Location = new System.Drawing.Point(585, 34);
+            this.label6.Location = new System.Drawing.Point(553, 34);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 25);
             this.label6.TabIndex = 47;
@@ -464,7 +464,7 @@ namespace PNTN_prov
             this.textBox4.BackColor = System.Drawing.Color.White;
             this.textBox4.Location = new System.Drawing.Point(526, 191);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(198, 20);
+            this.textBox4.Size = new System.Drawing.Size(133, 20);
             this.textBox4.TabIndex = 63;
             this.textBox4.Text = "0";
             // 
@@ -473,7 +473,7 @@ namespace PNTN_prov
             this.textBox5.BackColor = System.Drawing.Color.White;
             this.textBox5.Location = new System.Drawing.Point(526, 157);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(198, 20);
+            this.textBox5.Size = new System.Drawing.Size(133, 20);
             this.textBox5.TabIndex = 62;
             this.textBox5.Text = "0";
             // 
@@ -550,7 +550,7 @@ namespace PNTN_prov
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(729, 228);
+            this.label27.Location = new System.Drawing.Point(667, 228);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(72, 13);
             this.label27.TabIndex = 51;
@@ -561,7 +561,7 @@ namespace PNTN_prov
             this.textBox6.BackColor = System.Drawing.Color.White;
             this.textBox6.Location = new System.Drawing.Point(526, 225);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(198, 20);
+            this.textBox6.Size = new System.Drawing.Size(133, 20);
             this.textBox6.TabIndex = 50;
             this.textBox6.Text = "0";
             // 
@@ -620,7 +620,7 @@ namespace PNTN_prov
             this.textBox9.BackColor = System.Drawing.Color.White;
             this.textBox9.Location = new System.Drawing.Point(526, 282);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(198, 20);
+            this.textBox9.Size = new System.Drawing.Size(133, 20);
             this.textBox9.TabIndex = 79;
             this.textBox9.Text = "0";
             // 
@@ -677,7 +677,7 @@ namespace PNTN_prov
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(729, 319);
+            this.label38.Location = new System.Drawing.Point(667, 319);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(72, 13);
             this.label38.TabIndex = 67;
@@ -688,7 +688,7 @@ namespace PNTN_prov
             this.textBox11.BackColor = System.Drawing.Color.White;
             this.textBox11.Location = new System.Drawing.Point(526, 312);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(198, 20);
+            this.textBox11.Size = new System.Drawing.Size(133, 20);
             this.textBox11.TabIndex = 66;
             this.textBox11.Text = "0";
             // 
@@ -747,7 +747,7 @@ namespace PNTN_prov
             this.textBox14.BackColor = System.Drawing.Color.White;
             this.textBox14.Location = new System.Drawing.Point(526, 402);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(198, 20);
+            this.textBox14.Size = new System.Drawing.Size(133, 20);
             this.textBox14.TabIndex = 95;
             this.textBox14.Text = "0";
             // 
@@ -756,7 +756,7 @@ namespace PNTN_prov
             this.textBox15.BackColor = System.Drawing.Color.White;
             this.textBox15.Location = new System.Drawing.Point(526, 368);
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(198, 20);
+            this.textBox15.Size = new System.Drawing.Size(133, 20);
             this.textBox15.TabIndex = 94;
             this.textBox15.Text = "0";
             // 
@@ -833,7 +833,7 @@ namespace PNTN_prov
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(729, 439);
+            this.label49.Location = new System.Drawing.Point(667, 439);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(72, 13);
             this.label49.TabIndex = 83;
@@ -844,7 +844,7 @@ namespace PNTN_prov
             this.textBox16.BackColor = System.Drawing.Color.White;
             this.textBox16.Location = new System.Drawing.Point(526, 436);
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(198, 20);
+            this.textBox16.Size = new System.Drawing.Size(133, 20);
             this.textBox16.TabIndex = 82;
             this.textBox16.Text = "0";
             // 
@@ -903,7 +903,7 @@ namespace PNTN_prov
             this.textBox21.BackColor = System.Drawing.Color.White;
             this.textBox21.Location = new System.Drawing.Point(526, 483);
             this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(198, 20);
+            this.textBox21.Size = new System.Drawing.Size(133, 20);
             this.textBox21.TabIndex = 111;
             this.textBox21.Text = "0";
             // 
@@ -960,7 +960,7 @@ namespace PNTN_prov
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(729, 520);
+            this.label60.Location = new System.Drawing.Point(667, 520);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(72, 13);
             this.label60.TabIndex = 99;
@@ -971,7 +971,7 @@ namespace PNTN_prov
             this.textBox23.BackColor = System.Drawing.Color.White;
             this.textBox23.Location = new System.Drawing.Point(526, 517);
             this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(198, 20);
+            this.textBox23.Size = new System.Drawing.Size(133, 20);
             this.textBox23.TabIndex = 98;
             this.textBox23.Text = "0";
             // 
@@ -1030,7 +1030,7 @@ namespace PNTN_prov
             this.textBox26.BackColor = System.Drawing.Color.White;
             this.textBox26.Location = new System.Drawing.Point(526, 572);
             this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(198, 20);
+            this.textBox26.Size = new System.Drawing.Size(133, 20);
             this.textBox26.TabIndex = 127;
             this.textBox26.Text = "0";
             // 
@@ -1087,7 +1087,7 @@ namespace PNTN_prov
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(729, 609);
+            this.label71.Location = new System.Drawing.Point(667, 609);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(72, 13);
             this.label71.TabIndex = 115;
@@ -1098,7 +1098,7 @@ namespace PNTN_prov
             this.textBox28.BackColor = System.Drawing.Color.White;
             this.textBox28.Location = new System.Drawing.Point(526, 606);
             this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(198, 20);
+            this.textBox28.Size = new System.Drawing.Size(133, 20);
             this.textBox28.TabIndex = 114;
             this.textBox28.Text = "0";
             // 
@@ -1177,7 +1177,7 @@ namespace PNTN_prov
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label20.Location = new System.Drawing.Point(189, 650);
+            this.label20.Location = new System.Drawing.Point(124, 650);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(293, 20);
             this.label20.TabIndex = 130;
@@ -1186,7 +1186,7 @@ namespace PNTN_prov
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.trackBar1);
-            this.groupBox1.Location = new System.Drawing.Point(526, 632);
+            this.groupBox1.Location = new System.Drawing.Point(461, 632);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(198, 57);
             this.groupBox1.TabIndex = 131;
@@ -1198,7 +1198,7 @@ namespace PNTN_prov
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(816, 699);
+            this.ClientSize = new System.Drawing.Size(764, 699);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
@@ -1296,10 +1296,10 @@ namespace PNTN_prov
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label17);
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximumSize = new System.Drawing.Size(832, 737);
+            this.MaximumSize = new System.Drawing.Size(780, 737);
             this.Name = "Form1";
             this.Text = "PNTN_prov";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing_1);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_BeforeFormClosing_1);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
