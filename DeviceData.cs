@@ -16,7 +16,6 @@ namespace PNTN_prov
 
             DataExchange.blockNumber = blockNumberBox.Text;
             DataExchange.releaseDate = releaseDateBox.Text;
-
             blockNumberBox.Text = "";
             releaseDateBox.Text = "";
 

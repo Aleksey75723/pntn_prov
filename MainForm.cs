@@ -133,7 +133,6 @@ namespace PNTN_prov
         }//при вводе некорректных значений
 
 
-
         #region points of technical conditions
         //4.6.1
         private void CurrentMeasurement461Box_KeyPress(object sender, KeyPressEventArgs e)
@@ -394,6 +393,7 @@ namespace PNTN_prov
         #endregion
 
 
+
         private void AccuracyTrackBar_Scroll(object sender, EventArgs e)
         {
             label20.Text = $"Допустимая расчётная погрешность: {_accuracy}%";
@@ -559,7 +559,7 @@ namespace PNTN_prov
             Constants._EnterDefaultConstantsInFile();
         }
 
-        //about
+        //about 
         private void VersionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Версия 4", "Версия");

@@ -1,6 +1,6 @@
 ﻿namespace PNTN_prov
 {
-    internal static class DataExchange //класс для обмена данными между формами
+    internal static class DataExchange 
     {
         public static string blockNumber;
         public static string releaseDate;

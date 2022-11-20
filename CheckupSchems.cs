@@ -47,6 +47,7 @@ namespace PNTN_prov
         {
             e.Cancel = true;
             ((Control)sender).Hide();
+
         }//окно не удаляется при зыкрытии, даёт возможность открыть повторно
     }
 }
