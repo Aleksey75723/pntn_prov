@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace PNTN_prov
+﻿namespace PNTN_prov
 {
-    static class DataExchange //класс для обмена данными между формами
+    internal static class DataExchange //класс для обмена данными между формами
     {
-        public static string text1;
-        public static string text2;
-        public static bool button1ClickProv;
+        public static string blockNumber;
+        public static string releaseDate;
+        public static bool writeCheckProtocol;
     }
 }
