@@ -43,7 +43,8 @@ namespace PNTN_prov
             trackBar1.Scroll += AccuracyTrackBar_Scroll;
             label20.Text = $"Допустимая расчётная погрешность: {_accuracy}";
         }
-        private void _CalculationR(decimal U, decimal I, TextBox calcR, TextBox measurementCalc, Label labelsTextСorrectFaulty, decimal constantFromFile)
+
+        private void _calculationR(decimal U, decimal I, TextBox calcR, TextBox measurementCalc, Label labelsTextСorrectFaulty, decimal constantFromFile)
         {
             if (I != 0)
             {
@@ -66,7 +67,8 @@ namespace PNTN_prov
             }
 
         }//метод расчёта 1
-        private void _CalculationIR(decimal U1, decimal U2, TextBox calcI, TextBox calcR, TextBox measurementCalc, Label labelsTextСorrectFaulty, decimal constantFromFile1, decimal constantFromFile2)
+       
+        private void _calculationIR(decimal U1, decimal U2, TextBox calcI, TextBox calcR, TextBox measurementCalc, Label labelsTextСorrectFaulty, decimal constantFromFile1, decimal constantFromFile2)
         {
             if (U1 != 0)
             {
@@ -92,9 +94,10 @@ namespace PNTN_prov
 
             }
         }//метод расчёта 2
-        private static void _NotWriteLetters(KeyPressEventArgs e)//не вписывает буквы
+       
+        private void _notWriteLetters(KeyPressEventArgs e)//не вписывает буквы
         {
-            if (Char.IsNumber(e.KeyChar) | (e.KeyChar == Convert.ToChar(",")) | e.KeyChar == '\b')
+            if (Char.IsNumber(e.KeyChar) || (e.KeyChar == Convert.ToChar(",")) || e.KeyChar == '\b')
             {
                 return;
             }
@@ -103,7 +106,8 @@ namespace PNTN_prov
                 e.Handled = true;
             }
         }
-        private void _WriteZeroComma(TextBox text)//метод вписывания "0" и ","
+        
+        private void _writeZeroComma(TextBox text)//метод вписывания "0" и ","
         {
             if (text.Text == ",")
             {
@@ -111,7 +115,8 @@ namespace PNTN_prov
                 text.SelectionStart = text.Text.Length;
             }
         }
-        private void _LightCorrect(TextBox measurementCalc, Label labelsTextСorrectFaulty)
+        
+        private void _lightCorrect(TextBox measurementCalc, Label labelsTextСorrectFaulty)
         {
             if ((Convert.ToDouble(measurementCalc.Text)) < _accuracy &&
                 (Convert.ToDouble(measurementCalc.Text)) > -(_accuracy) &&
@@ -126,7 +131,8 @@ namespace PNTN_prov
                 labelsTextСorrectFaulty.Text = Properties.Resources.DefaultLabelsTextFaulty;
             }
         }//подстветка исправности/неисправности
-        private void _IncorrectData(TextBox textBox)
+       
+        private void _incorrectData(TextBox textBox)
         {
             textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
             MessageBox.Show("Введено некорретное значение", "Ошибка");
@@ -137,82 +143,88 @@ namespace PNTN_prov
         //4.6.1
         private void CurrentMeasurement461Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            _NotWriteLetters(e);
+            _notWriteLetters(e);
         }
+        
         private void CurrentMeasurement461Box_TextChanged(object sender, EventArgs e)
         {
-            _WriteZeroComma(CurrentMeasurement461);
+            _writeZeroComma(CurrentMeasurement461);
             try
             {
                 if (CurrentMeasurement461.Text != "")
                     I = decimal.Parse(CurrentMeasurement461.Text);
                 СonstantFromFile = Constants.δ_X23_X26;
 
-                _CalculationR(U, I, textBox20, textBox3, label1, СonstantFromFile);
+                _calculationR(U, I, textBox20, textBox3, label1, СonstantFromFile);
             }
             catch
             {
-                _IncorrectData(CurrentMeasurement461);
+                _incorrectData(CurrentMeasurement461);
             }
         }
+       
         private void VoltageMeasurement461Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            _NotWriteLetters(e);
+            _notWriteLetters(e);
         }
+        
         private void VoltageMeasurement461Box_TextChanged(object sender, EventArgs e)
         {
-            _WriteZeroComma(VoltageMeasurement461);
+            _writeZeroComma(VoltageMeasurement461);
             try
             {
                 if (VoltageMeasurement461.Text != "")
                     U = decimal.Parse(VoltageMeasurement461.Text);
                 СonstantFromFile = Constants.δ_X23_X26;
 
-                _CalculationR(U, I, textBox20, textBox3, label1, СonstantFromFile);
+                _calculationR(U, I, textBox20, textBox3, label1, СonstantFromFile);
             }
             catch
             {
-                _IncorrectData(VoltageMeasurement461);
+                _incorrectData(VoltageMeasurement461);
             }
         }
 
         //4.6.2
         private void VoltagePV3Measurement462Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            _NotWriteLetters(e);
+            _notWriteLetters(e);
         }
+       
         private void VoltagePV3Measurement462Box_TextChanged(object sender, EventArgs e)
         {
-            _WriteZeroComma(VoltagePV3Measurement462);
+            _writeZeroComma(VoltagePV3Measurement462);
             try
             {
                 if (VoltagePV3Measurement462.Text != "")
                     I = decimal.Parse(VoltagePV3Measurement462.Text);
 
-                _CalculationIR(I, U, textBox5, textBox4, textBox6, label27, Constants.I_X24_X25, Constants.δ_X24_X25);
+                _calculationIR(I, U, textBox5, textBox4, textBox6, label27, Constants.I_X24_X25, Constants.δ_X24_X25);
             }
             catch
             {
-                _IncorrectData(VoltagePV3Measurement462);
+                _incorrectData(VoltagePV3Measurement462);
             }
         }
+       
         private void VoltagePV2Measurement462BoxBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            _NotWriteLetters(e);
+            _notWriteLetters(e);
         }
+        
         private void VoltagePV2Measurement462BoxBox_TextChanged(object sender, EventArgs e)
         {
-            _WriteZeroComma(VoltagePV2Measurement462);
+            _writeZeroComma(VoltagePV2Measurement462);
             try
             {
                 if (VoltagePV2Measurement462.Text != "")
                     U = decimal.Parse(VoltagePV2Measurement462.Text);
 
-                _CalculationIR(I, U, textBox5, textBox4, textBox6, label27, Constants.I_X24_X25, Constants.δ_X24_X25);
+                _calculationIR(I, U, textBox5, textBox4, textBox6, label27, Constants.I_X24_X25, Constants.δ_X24_X25);
             }
             catch
             {
-                _IncorrectData(VoltagePV2Measurement462);
+                _incorrectData(VoltagePV2Measurement462);
             }
             
         }
@@ -220,43 +232,46 @@ namespace PNTN_prov
         //4.6.3
         private void CurrentMeasurement463Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            _NotWriteLetters(e);
+            _notWriteLetters(e);
         }
+       
         private void CurrentMeasurement463Box_TextChanged(object sender, EventArgs e)
         {
-            _WriteZeroComma(CurrentMeasurement463);
+            _writeZeroComma(CurrentMeasurement463);
             try
             {
                 if (CurrentMeasurement463.Text != "")
                     I = decimal.Parse(CurrentMeasurement463.Text);
 
                 СonstantFromFile = Constants.δ_X15_X16;
-                _CalculationR(U, I, textBox9, textBox11, label38, СonstantFromFile);
+                _calculationR(U, I, textBox9, textBox11, label38, СonstantFromFile);
             }
             catch
             {
-                _IncorrectData(CurrentMeasurement463);
+                _incorrectData(CurrentMeasurement463);
             }
             
         }
+        
         private void VoltageMeasurement463Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            _NotWriteLetters(e);
+            _notWriteLetters(e);
         }
+        
         private void VoltageMeasurement463Box_TextChanged(object sender, EventArgs e)
         {
-            _WriteZeroComma(VoltageMeasurement463);
+            _writeZeroComma(VoltageMeasurement463);
             try
             {
                 if (VoltageMeasurement463.Text != "")
                     U = decimal.Parse(VoltageMeasurement463.Text);
 
                 СonstantFromFile = Constants.δ_X15_X16;
-                _CalculationR(U, I, textBox9, textBox11, label38, СonstantFromFile);
+                _calculationR(U, I, textBox9, textBox11, label38, СonstantFromFile);
             }
             catch 
             {
-                _IncorrectData(VoltageMeasurement463);
+                _incorrectData(VoltageMeasurement463);
             }
             
         }
@@ -264,41 +279,44 @@ namespace PNTN_prov
         //4.6.4
         private void VoltagePV3Measurement464Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            _NotWriteLetters(e);
+            _notWriteLetters(e);
         }
+       
         private void VoltagePV3Measurement464Box_TextChanged(object sender, EventArgs e)
         {
-            _WriteZeroComma(VoltagePV3Measurement464);
+            _writeZeroComma(VoltagePV3Measurement464);
             try
             {
                 if (VoltagePV3Measurement464.Text != "")
                     I = decimal.Parse(VoltagePV3Measurement464.Text);
 
-                _CalculationIR(I, U, textBox15, textBox14, textBox16, label49, Constants.I_X27_X28, Constants.δ_X27_X28);
+                _calculationIR(I, U, textBox15, textBox14, textBox16, label49, Constants.I_X27_X28, Constants.δ_X27_X28);
             }
             catch
             {
-                _IncorrectData(VoltagePV3Measurement464);
+                _incorrectData(VoltagePV3Measurement464);
             }
             
         }
+       
         private void VoltagePV2Measurement464Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            _NotWriteLetters(e);
+            _notWriteLetters(e);
         }
+       
         private void VoltagePV2Measurement464Box_TextChanged(object sender, EventArgs e)
         {
-            _WriteZeroComma(VoltagePV2Measurement464);
+            _writeZeroComma(VoltagePV2Measurement464);
             try
             {
                 if (VoltagePV2Measurement464.Text != "")
                     U = decimal.Parse(VoltagePV2Measurement464.Text);
 
-                _CalculationIR(I, U, textBox15, textBox14, textBox16, label49, Constants.I_X27_X28, Constants.δ_X27_X28);
+                _calculationIR(I, U, textBox15, textBox14, textBox16, label49, Constants.I_X27_X28, Constants.δ_X27_X28);
             }
             catch 
             {
-                _IncorrectData(VoltagePV2Measurement464);
+                _incorrectData(VoltagePV2Measurement464);
             }
             
         }
@@ -306,87 +324,93 @@ namespace PNTN_prov
         //4.6.5
         private void CurrentMeasurement465Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            _NotWriteLetters(e);
+            _notWriteLetters(e);
         }
+       
         private void CurrentMeasurement465Box_TextChanged(object sender, EventArgs e)
         {
-            _WriteZeroComma(CurrentMeasurement465);
+            _writeZeroComma(CurrentMeasurement465);
             try
             {
                 if (CurrentMeasurement465.Text != "")
                     I = decimal.Parse(CurrentMeasurement465.Text);
 
                 СonstantFromFile = Constants.δ_X11_X12;
-                _CalculationR(U, I, textBox21, textBox23, label60, СonstantFromFile);
+                _calculationR(U, I, textBox21, textBox23, label60, СonstantFromFile);
             }
             catch
             {
-                _IncorrectData(CurrentMeasurement465);
+                _incorrectData(CurrentMeasurement465);
             }
             
         }
+       
         private void VoltageMeasurement465Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            _NotWriteLetters(e);
+            _notWriteLetters(e);
         }
+        
         private void VoltageMeasurement465Box_TextChanged(object sender, EventArgs e)
         {
-            _WriteZeroComma(VoltageMeasurement465);
+            _writeZeroComma(VoltageMeasurement465);
             try
             {
                 if (VoltageMeasurement465.Text != "")
                     U = decimal.Parse(VoltageMeasurement465.Text);
 
                 СonstantFromFile = Constants.δ_X11_X12;
-                _CalculationR(U, I, textBox21, textBox23, label60, СonstantFromFile);
+                _calculationR(U, I, textBox21, textBox23, label60, СonstantFromFile);
             }
             catch
             {
-                _IncorrectData(VoltageMeasurement465);
+                _incorrectData(VoltageMeasurement465);
             }
         }
 
         //4.6.6
         private void CurrentMeasurement466Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            _NotWriteLetters(e);
+            _notWriteLetters(e);
         }
+       
         private void CurrentMeasurement466Box_TextChanged(object sender, EventArgs e)
         {
-            _WriteZeroComma(CurrentMeasurement466);
+            _writeZeroComma(CurrentMeasurement466);
             try
             {
                 if (CurrentMeasurement466.Text != "")
                     I = decimal.Parse(CurrentMeasurement466.Text);
 
                 СonstantFromFile = Constants.δ_X21_X22;
-                _CalculationR(U, I, textBox26, textBox28, label71, СonstantFromFile);
+                _calculationR(U, I, textBox26, textBox28, label71, СonstantFromFile);
 
             }
             catch
             {
-                _IncorrectData(CurrentMeasurement466);
+                _incorrectData(CurrentMeasurement466);
             }
         
         }
+       
         private void VoltageMeasurement466_KeyPress(object sender, KeyPressEventArgs e)
         {
-            _NotWriteLetters(e);
+            _notWriteLetters(e);
         }
+       
         private void VoltageMeasurement466_TextChanged(object sender, EventArgs e)
         {
-            _WriteZeroComma(VoltageMeasurement466);
+            _writeZeroComma(VoltageMeasurement466);
             try
             {
                 if (VoltageMeasurement466.Text != "")
                     U = decimal.Parse(VoltageMeasurement466.Text);
 
                 СonstantFromFile = Constants.δ_X21_X22;
-                _CalculationR(U, I, textBox26, textBox28, label71, СonstantFromFile);
+                _calculationR(U, I, textBox26, textBox28, label71, СonstantFromFile);
             }
             catch
             {
-                _IncorrectData(VoltageMeasurement466);
+                _incorrectData(VoltageMeasurement466);
             }
            
         }
@@ -399,13 +423,14 @@ namespace PNTN_prov
             label20.Text = $"Допустимая расчётная погрешность: {_accuracy}%";
             _accuracy = Convert.ToDouble(trackBar1.Value) / 10d;
 
-            _LightCorrect(textBox3, label1);
-            _LightCorrect(textBox6, label27);
-            _LightCorrect(textBox11, label38);
-            _LightCorrect(textBox16, label49);
-            _LightCorrect(textBox23, label60);
-            _LightCorrect(textBox28, label71);
+            _lightCorrect(textBox3, label1);
+            _lightCorrect(textBox6, label27);
+            _lightCorrect(textBox11, label38);
+            _lightCorrect(textBox16, label49);
+            _lightCorrect(textBox23, label60);
+            _lightCorrect(textBox28, label71);
         }//Бегунок расчётной погрешности, изменение подсветки исправности
+       
         private void ResetAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CurrentMeasurement461.Text = "0";
@@ -456,18 +481,19 @@ namespace PNTN_prov
             _formSchemes.Show();
         }
 
+
         //действия с протоколом проверки
         private void WriteProtocolToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _formForProtocol.ShowDialog();
-            //protocol.WriteProtocol();
-            if (DataExchange.writeCheckProtocol)
+
+            if (DataExchange.WriteCheckProtocol)
             {
                 using (var sw = new StreamWriter(_pathProtocolFile, true))
                 {
                     sw.WriteLine("------------------------------------------------------------------------------");
-                    sw.Write("Номер блока: {0}", DataExchange.blockNumber);
-                    sw.WriteLine("({0})", DataExchange.releaseDate);
+                    sw.Write($"Номер блока: {DataExchange.blockNumber}");
+                    sw.WriteLine($"({DataExchange.releaseDate})");
                     sw.WriteLine($"Дата проверки: {DateTime.Now}");
                     sw.WriteLine($"Текущая допустимая погрешность: {_accuracy} %");
 
@@ -520,6 +546,7 @@ namespace PNTN_prov
                 }
             }
         }
+
         private void OpenProtocolToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (File.Exists(_pathProtocolFile))
@@ -537,6 +564,7 @@ namespace PNTN_prov
         {
             Constants._ShowCurrentConstants();
         }
+
         private void OpenConstantsPntnConstToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!File.Exists(Constants._pathConstantFile))
@@ -554,20 +582,24 @@ namespace PNTN_prov
                 MessageBox.Show("файла не существует");
             }
         }
+
         private void DefaultConstantsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Constants._EnterDefaultConstantsInFile();
         }
+
 
         //about 
         private void VersionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Версия 4", "Версия");
         }
+
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("ООО \"НПО САУТ\"\n\nАнтонов А.В.\na.antonov@saut.ru\n\nMarch 2022", "about");
         }
+
 
         private void MainFormBeforeFormClosing(object sender, FormClosingEventArgs e)
         {

@@ -16,6 +16,7 @@ namespace PNTN_prov
 
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
+
         void SchemesBoxSelectedIndexChanged(object sender, EventArgs e)
         {
             switch (schemesBox.SelectedIndex)
@@ -43,6 +44,7 @@ namespace PNTN_prov
                     schemesBox.Text = "4.6.6"; break;
             }
         }//выбор схемы
+
         private void CheckupSchems_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;

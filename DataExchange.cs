@@ -4,6 +4,6 @@
     {
         public static string blockNumber;
         public static string releaseDate;
-        public static bool writeCheckProtocol;
+        public static bool WriteCheckProtocol { get; set; }
     }
 }
